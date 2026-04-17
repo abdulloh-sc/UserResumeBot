@@ -3,6 +3,8 @@ package uz.imaan.entity;
 import uz.imaan.entity.enums.Role;
 import uz.imaan.entity.enums.UserStatus;
 
+import java.time.LocalDateTime;
+
 public class TelegramUser {
     private Long chatId;
     private String fullName;
@@ -10,11 +12,22 @@ public class TelegramUser {
     private UserStatus userStatus;
     private Role role;
     private UserStatus status;
+    private LocalDateTime createdAt;
+
+
 
     public TelegramUser(Long chatId) {
         this.chatId = chatId;
         this.role = Role.USER;
         this.status = UserStatus.START;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
     public Long getChatId() {

@@ -66,6 +66,8 @@ public class ResumeBot extends TelegramLongPollingBot {
                         "\n" + "tajriba haqida malumotingiz : " + user.getExprience() +
                         "\n\n" + "Adminlar sizga aloqaga chiqishadi";
 
+                sendText(msg, chatId);
+
                 String adminMsg = "Yangi ariza keldi \n" +
                         user.getFullName() + "\n" + "Tajriba :  " +  user.getExprience() + "\n" + " id : " + user.getChatId();
 
